@@ -4,6 +4,70 @@
     padding: 0;
 }
 
+:root {
+    --color-1: #222222;
+    --color-2: #000000;
+    --color-hover: #2f2f2f;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 'sidebar content';
+    background-color: var(--color-2);
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    grid-area: sidebar;
+    background-color: var(--color-1);
+    height: 100vh;
+    width: 20%;
+}
+
+nav header {
+    font-size: 1.3em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    padding: 3vh 0;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 5vh;
+    padding: 4vh 4vw 4vh ;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 2vw;
+}
+
+.nav-link:hover {
+    background-color: var(--color-hover);
+    font-size: 1.4rem;
+}
+
+.content {
+    grid-area: content;
+    padding: 4vw;
+}
+
+
+
 @media (max-width: 768px) {
     
 }
