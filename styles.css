@@ -2,28 +2,35 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 :root {
-    --color-1: #222222;
-    --color-2: #000000;
+    --color-sidebar: #181818;
+    --color-main: #1f1f1f;
+    --color-accent: #0078d4;
     --color-hover: #2f2f2f;
+    --color-text-sidebar: #767676;
+    --color-text-main: #cbcbcb;
+    --font-main: sans-serif;
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-areas: 'sidebar content';
-    background-color: var(--color-2);
-    color: white;
+    background-color: var(--color-main);
+    color: var(--color-text-main);
+    font-family: var(--font-main);
 }
 
 .sidebar {
     position: fixed;
     grid-area: sidebar;
-    background-color: var(--color-1);
+    background-color: var(--color-sidebar);
     height: 100vh;
     width: 20%;
+    border-radius: 10px;
 }
 
 nav header {
@@ -35,6 +42,8 @@ nav header {
     gap: 1vw;
     padding: 3vh 0;
     text-transform: uppercase;
+    color: var(--color-accent);
+    font-weight: bolder;
 }
 
 nav {
@@ -45,7 +54,7 @@ nav {
 
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: var(--color-text-sidebar);
     width: 100%;
     height: 5vh;
     padding: 4vh 4vw 4vh ;
@@ -59,14 +68,51 @@ nav {
 .nav-link:hover {
     background-color: var(--color-hover);
     font-size: 1.4rem;
+    border-radius: 10px;
+    color: var(--color-accent)
 }
 
 .content {
     grid-area: content;
-    padding: 4vw;
+    padding: 0 4vw 40vh;
 }
 
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 10vh 0;
+    border-bottom: 1px solid var(--color-hover)
+}
 
+.main-section i {
+    padding-right: 1.5vw
+}
+
+.main-section header {
+    font-size: 2rem;
+    color: var(--color-accent);
+    font-weight: bolder;
+}
+
+.main-section p, .main-section li, .main-section code {
+    font-size: 1.3rem;
+}
+
+ul li {
+    list-style: none;
+    font-weight: bold;
+}
+
+.main-section pre {
+    background-color: var(--color-hover);
+    border-radius: 10px;
+    padding: 0 1.5vw;
+}
+
+.main-section code {
+    font-size: 1.2rem;
+}
 
 @media (max-width: 768px) {
     
