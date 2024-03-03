@@ -158,11 +158,13 @@ ul li {
         text-decoration: none;
         font-size: 1.3em;
         padding: 3vh 0;
+        gap: 1vw;
         text-transform: uppercase;
         color: var(--color-accent);
         font-weight: bolder;
         background-color: var(--color-sidebar);
         position: fixed;
+        top: 0;
         height: 10vh;
         width: 100%;
         z-index: 1000;
